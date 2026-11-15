@@ -95,3 +95,10 @@ The research reference tab, temporary viewport overrides and local QA server are
 - Cloudflare and Google public DNS resolvers return the new records. Validated the Cloudflare endpoint and fresh public DNS over HTTPS: `https://www.integrail.ai/providers.html?source=verify` returns 301 to `https://integrail.ai/providers.html?source=verify`, with valid TLS. Cached prior DNS answers expire independently.
 - Both production HTML pages match the checked source byte for byte. Browser smoke checks load the HTTPS home/provider pages, expected headings, images and fonts, with no horizontal overflow or console errors/warnings. The original localhost server on port 4187 remains running.
 - Deployment/DNS configuration and the previous HubSpot values for rollback are documented in `docs/DEPLOYMENT.md`.
+
+## Stable business hero copy — 15 November 2026
+
+- Reproduced the opening copy moving vertically by about 38 px between Sales and Research because the hero centered both columns against the selected diagram’s height.
+- Top-aligned the hero columns and gave the desktop copy its own responsive top spacing, preserving the initial composition while removing its dependency on diagram height. The stacked mobile layout keeps zero extra top padding.
+- Switched Sales → Operations → Research → Sales at 1024, 1280 and 1440 px. The eyebrow, heading, description and CTA row retained identical document positions at each width. Checked all three examples at 390 and 320 px: heading position remains stable, mobile padding is unchanged and there is no horizontal overflow.
+- Syntax, links, structure, assets and production build checks pass. This changes only the business hero CSS; example behavior and content remain unchanged.
