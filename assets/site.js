@@ -5,8 +5,7 @@ const providerPage = document.body.dataset.page === 'providers';
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 let motionPaused = reducedMotion.matches;
 const motionListeners = new Set();
-const logo = `<svg class="brand-mark" viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M5 7h10l16 22M5 18h14M5 29h10L31 7" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-const brand = `<a class="brand" href="index.html" aria-label="Integrail home">${logo}<span>integrail</span></a>`;
+const brand = `<a class="brand" href="index.html" aria-label="Integrail home"><img class="brand-wordmark" src="assets/integrail-logo.svg" width="400" height="110" alt="" aria-hidden="true"></a>`;
 
 function initializeChrome() {
   const header = $('[data-header]');

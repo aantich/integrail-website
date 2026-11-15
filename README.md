@@ -23,13 +23,21 @@ npm start
 
 ## Included
 
-- Original monochrome illustration system and wordmark; Manrope, Instrument Serif and IBM Plex Mono, self-hosted with their SIL Open Font Licenses.
+- Original monochrome illustration system and outlined SVG wordmark with a AI emblem with three rounded corners and a square upper-right corner; Manrope, Instrument Serif and IBM Plex Mono, self-hosted with their SIL Open Font Licenses.
 - A business-first hero with sales, operations and research examples that connect company sources to an answer and a reusable agent workflow.
 - Flat, responsive architecture diagrams in the detailed platform explainer and provider page. They distinguish continuous ingestion from agent actions, show graph/vector/SQL data, the enterprise knowledge engine, RAG, business objects, agents and fixed/generated UI. The provider deployment illustration remains separate.
 - Two automatically looping document-versus-graph comparisons: investment lookup and cross-document relationship discovery. Each 12-second simulation holds its final result for 3.2 seconds, then restarts. Optional pause/replay controls and reduced-motion preferences remain available. Offscreen or hidden-tab playback suspends and resumes when visible.
 - Keyboard-accessible tabs, mobile navigation, FAQ disclosures, native modal focus management, and a global motion switch. Reduced motion shows the completed examples without animation.
 - Separate cloud/hosting/MSP page with service packaging, responsibilities, pilot steps, and an editable illustrative revenue calculator.
 - A pilot brief planner. Visitors can download or copy their entries; no entries are sent or persisted. The form never pretends to submit a lead.
+
+## Brand assets
+
+- `assets/integrail-logo.svg`: complete monochrome wordmark, drawn as vector outlines.
+- `assets/integrail-mark.svg`: compact AI emblem for illustrations.
+- `assets/favicon.svg`: matching square browser icon.
+
+The wordmark uses outlined Manrope Bold with custom spacing and an tile with three rounded corners and a square upper-right corner. It needs no fonts to render and scales without losing sharpness. The font license is included in `assets/fonts/Manrope-OFL.txt`.
 
 ## Before a public launch
 

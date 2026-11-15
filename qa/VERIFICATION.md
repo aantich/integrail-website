@@ -70,3 +70,10 @@ The research reference tab, temporary viewport overrides and local QA server are
 - Observed the fact example reach 60,000 tokens / 100% and then return to an active intermediate frame with its pause control still active. Inspected the relationship scenario in continuous playback and verified scenario switching. Explicit pause holds the position; resume and global motion-off/on work. Reduced-motion continues to show a static completed result.
 - Visually inspected the desktop hero, both comparison diagrams, architecture, provider hero and calculator, plus mobile layouts. Checked 320, 390, 768, 1024 and 1280 px widths across the relevant layouts, including both pages: no horizontal document overflow. Larger text fits the inspected cards and panels. Browser logs showed no errors or warnings.
 - Final syntax, page-structure, links, anchors and asset checks pass; static build passes. The existing localhost server on port 4187 remains running.
+
+## Monochrome vector logo — 15 November 2026
+
+- Replaced the old icon and text lockup with an outlined SVG wordmark, using bold lowercase lettering and an inverted AI tile. The tile has three rounded corners and a sharp, square upper-right corner, per Anton’s correction.
+- Updated the shared header and footer on both pages, the two small illustration marks, and the favicon. Artwork is entirely vector paths and needs no runtime font or external assets.
+- Visually inspected the desktop header, 320 px mobile header and footer, and 768 px provider page. Logo assets load, navigation fits, and there is no horizontal page overflow at the checked widths. Browser logs show no errors or warnings.
+- Rechecked the corrected square corner in the browser. Syntax, links, structure and asset checks and the production build pass. Localhost remains available on port 4187.
