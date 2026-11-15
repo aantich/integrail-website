@@ -43,3 +43,13 @@ The research reference tab, temporary viewport overrides and local QA server are
 - No duplicate DOM IDs and no browser console warnings or errors were reported in the inspected final home-page state.
 - The RAG comparison JavaScript block and both examples’ HTML are byte-for-byte unchanged from the prior source revision. The first example still renders its complete 60,000-versus-600 token result when motion is off.
 - The local preview on port 4187 was already running at the start of this revision and is left running, as Anton requested. This supersedes the initial QA-server cleanup note for that process.
+
+## Business opening revision — 15 November 2026
+
+- Replaced the opening architecture with a business illustration and the message “Talk to your data. Put it to work.” Supporting copy covers company-wide answers, agents, launch speed, operating cost and infrastructure control.
+- Sales, operations and research tabs change the example sources, question, grounded answer and repeatable agent workflow. All examples are identified as illustrative workflows; there is no live query or agent execution.
+- Verified click and keyboard tab selection, the primary pilot-planning CTA, modal dismissal and the global motion control. Source-flow animation pauses with the existing motion setting; default content remains readable without animation.
+- Inspected the desktop composition at 1280 pixels and mobile copy/illustration at 390 pixels. Checked 320- and 1024-pixel layouts for horizontal overflow, including the longer research example. No horizontal page overflow or source-card clipping was observed. Browser logs contained no errors or warnings.
+- Existing syntax, structure, link, anchor and asset checks pass. The static build passes at approximately 692 KiB.
+- Byte comparisons confirm that all homepage content from the source band onward, both RAG simulations, the detailed architecture files and the provider page are unchanged by this revision.
+- The existing localhost server remains running on port 4187.

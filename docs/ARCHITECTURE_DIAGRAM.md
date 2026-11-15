@@ -16,7 +16,7 @@ Lastapp sources read: `projects/lastapp/AGENTS.md`, `DEVELOPMENT.md`, `ENTITY_RU
 
 ## Visual implementation
 
-`assets/architecture.js` owns the shared architecture content and renderer. `assets/architecture.css` supplies the isolated diagram styles. The hero and provider diagram use a compact layout. The main platform section uses the reference’s left-to-right desktop organization, then reflows into a readable vertical view on phones. Text stays HTML rather than shrinking inside a fixed SVG.
+`assets/architecture.js` owns the shared architecture content and renderer. `assets/architecture.css` supplies the isolated diagram styles. The provider diagram uses a compact layout. A subsequent hero revision replaced the opening architecture with a business workflow illustration; the detailed platform diagram remains the technical explanation. The main platform section uses the reference’s left-to-right desktop organization, then reflows into a readable vertical view on phones. Text stays HTML rather than shrinking inside a fixed SVG.
 
 Solid arrows represent intake/knowledge flow; dashed return arrows represent agent actions through the connector. Connector routes are measured from the rendered nodes and redrawn on resize. Small SVG particles follow the routes; the existing global motion switch and reduced-motion setting apply.
 

@@ -50,8 +50,56 @@ function setMotion(paused) {
   motionListeners.forEach(listener => listener(paused));
 }
 
-function renderHero() {
-  window.IntegrailArchitecture.render($('[data-hero-illustration]'), {compact:true, id:'hero-architecture'});
+function initializeBusinessHero() {
+  const scene = $('[data-business-scene]');
+  if (!scene) return;
+  const examples = [
+    {
+      sources:['Customer emails','Account plan','CRM records'],
+      question:'What could put the Acme renewal at risk?',
+      lead:'One unresolved support issue.',
+      answer:'The contract renews in 14 days, and the latest email asks for an update.',
+      citations:['Email thread','Renewal plan','Account record'],
+      agent:'Renewal copilot', tasks:['Watch accounts','Flag risks','Draft follow-ups']
+    },
+    {
+      sources:['Team updates','Project plan','Task records'],
+      question:'What’s holding up the Atlas launch?',
+      lead:'Legal approval is still pending.',
+      answer:'The project plan and latest team update both flag it as the final blocker.',
+      citations:['Team update','Launch plan','Open task'],
+      agent:'Launch coordinator', tasks:['Track blockers','Prepare updates','Draft reminders']
+    },
+    {
+      sources:['Customer feedback','Interview notes','Support records'],
+      question:'What did we learn from customer interviews?',
+      lead:'Onboarding is the recurring friction point.',
+      answer:'Teams want fewer setup steps and clearer ownership. Support requests echo the same theme.',
+      citations:['Feedback','Interviews','Support tickets'],
+      agent:'Customer insight agent', tasks:['Read feedback','Connect themes','Prepare briefs']
+    }
+  ];
+  const tabs = $$('[data-business-example]', scene);
+  function selectExample(index) {
+    const example = examples[index];
+    tabs.forEach((tab,i) => {
+      tab.setAttribute('aria-selected', String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+    });
+    $('#business-example', scene).setAttribute('aria-labelledby', tabs[index].id);
+    $('[data-business-question]', scene).textContent = example.question;
+    const answer = $('[data-business-answer]', scene);
+    const lead = document.createElement('strong');
+    lead.textContent = example.lead;
+    answer.replaceChildren(lead, document.createTextNode(` ${example.answer}`));
+    $('[data-business-agent]', scene).textContent = example.agent;
+    ['source','citation','task'].forEach((kind) => {
+      const values = example[{source:'sources',citation:'citations',task:'tasks'}[kind]];
+      $$(`[data-business-${kind}]`, scene).forEach((node,i) => { node.textContent = values[i]; });
+    });
+  }
+  tabs.forEach((tab,index) => tab.addEventListener('click', () => selectExample(index)));
+  addTabKeyboard(tabs, selectExample);
 }
 
 function initializeArchitecture() {
@@ -284,7 +332,7 @@ function initializePilot() {
 }
 
 initializeChrome();
-renderHero();
+initializeBusinessHero();
 renderProviderIllustrations();
 initializeArchitecture();
 initializeDemo();
