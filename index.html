@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f9f6">
+  <title>Integrail — Agents and RAG as a service. Totally yours.</title>
+  <meta name="description" content="Turn company knowledge into connected intelligence. Graph + vector RAG and powerful AI agents, delivered by your cloud or managed service provider. Your data. Your infrastructure. Your choice.">
+  <meta property="og:title" content="Integrail — Intelligence, on your terms.">
+  <meta property="og:description" content="Agents and RAG as a service. Your knowledge, your cloud, your control.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://integrail-private-preview.anton-antich.chatgpt.site/">
+  <link rel="canonical" href="https://integrail-private-preview.anton-antich.chatgpt.site/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/manrope-regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/instrument-serif-italic.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" data-header></header>
+  <main id="main">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> AGENTS + RAG AS A SERVICE</p>
+        <h1>Intelligence,<br>on your terms.<br><em>Totally yours.</em></h1>
+        <p class="hero-description">Your company’s knowledge. The world’s best agents.<br class="desktop-break"> Connected, on infrastructure you control.</p>
+        <div class="button-row">
+          <button class="button button-dark" data-pilot>Build your AI advantage <span aria-hidden="true">↗</span></button>
+          <a class="button button-quiet" href="#difference"><span class="play-icon" aria-hidden="true">▷</span> See the difference</a>
+        </div>
+        <p class="hero-footnote">Delivered by your cloud, hosting or managed service provider.</p>
+      </div>
+      <div class="hero-visual" data-hero-illustration></div>
+    </section>
+
+    <section class="source-band container" aria-label="Connect your company knowledge">
+      <p>All the places your<br><strong>business already lives.</strong></p>
+      <div class="source-names">
+        <span><svg viewBox="0 0 24 20" aria-hidden="true"><path d="M2 17V3l10 8L22 3v14M2 3h20"/></svg> Gmail</span>
+        <span><svg viewBox="0 0 22 22" aria-hidden="true"><path d="M1 1h8v8H1zM13 1h8v8h-8zM1 13h8v8H1zM13 13h8v8h-8z"/></svg> Microsoft 365</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 3 6 0 7 13-4 5H5l-3-5ZM9 3l9 18M2 16h20M15 3 5 21"/></svg> Google Drive</span>
+        <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="16" cy="7" r="5"/><circle cx="17" cy="17" r="5"/><path d="M2 5h12v14H2z"/><path d="M6 9h4M6 15h4M6 9v3h4v3"/></svg> SharePoint</span>
+        <span class="more-sources">+ your files</span>
+      </div>
+    </section>
+
+    <section class="intro-section container section-space" id="why">
+      <p class="eyebrow">01 / KNOWLEDGE IS YOUR ADVANTAGE</p>
+      <div class="section-heading split-heading">
+        <h2>Your AI is only as good<br>as <em>what it knows.</em></h2>
+        <p>Your business is spread across inboxes, files and systems. Integrail connects the facts, keeps them current, and gives your agents the context to do useful work.</p>
+      </div>
+      <div class="value-grid">
+        <article><span class="value-icon" aria-hidden="true">↗</span><h3>Less searching.<br>More doing.</h3><p>Retrieve the relevant facts and passages, instead of asking an agent to read its way through your business.</p></article>
+        <article><span class="value-icon graph-glyph" aria-hidden="true">⌘</span><h3>The connections<br>change everything.</h3><p>Vector search finds meaning. A knowledge graph connects people, companies and events across documents.</p></article>
+        <article><span class="value-icon" aria-hidden="true">⌂</span><h3>Your knowledge.<br>Your home.</h3><p>Keep your knowledge layer with a provider you trust. Choose where it lives and which agents can use it.</p></article>
+      </div>
+    </section>
+
+    <section class="difference-section section-space" id="difference">
+      <div class="container">
+        <div class="difference-intro">
+          <div><p class="eyebrow">02 / A SHORTER PATH TO THE ANSWER</p><h2>100× faster.<br><em>100× cheaper queries.</em><sup>*</sup></h2></div>
+          <div class="difference-description"><p>Stop paying your agents<br>to find the same facts again.</p><span>*An illustrative 100× query scenario, not a measured Integrail benchmark. Explore the assumptions below.</span></div>
+        </div>
+        <div class="demo" data-demo>
+          <div class="demo-topbar">
+            <div class="scenario-tabs" role="tablist" aria-label="Choose a research example">
+              <button id="tab-fact" role="tab" aria-selected="true" aria-controls="demo-stage" data-scenario="fact">01 <span>Find a fact</span></button>
+              <button id="tab-relationship" role="tab" aria-selected="false" aria-controls="demo-stage" tabindex="-1" data-scenario="relationship">02 <span>Connect the dots</span></button>
+            </div>
+            <div class="demo-controls"><button class="icon-button" data-demo-replay aria-label="Replay example" title="Replay example">↺</button><button class="icon-button" data-demo-play aria-label="Pause example" title="Pause example">Ⅱ</button></div>
+          </div>
+          <div id="demo-stage" role="tabpanel" aria-labelledby="tab-fact">
+            <div class="demo-question"><span class="question-icon" aria-hidden="true">↳</span><span data-question>Did Smith invest in Integrail?</span><span class="mono">ONE QUESTION. TWO PATHS.</span></div>
+            <div class="demo-evidence" data-evidence></div>
+            <div class="comparison-grid">
+              <article class="comparison-pane regular-pane">
+                <div class="pane-heading"><span class="tiny-label">WITHOUT A KNOWLEDGE LAYER</span><h3>Read. Search. Repeat.</h3><p>An agent searches through the files.</p></div>
+                <div class="document-field" data-document-field aria-hidden="true"></div>
+                <div class="process-status"><span class="scan-indicator" aria-hidden="true"></span><span data-regular-status>Waiting for the question…</span></div>
+                <div class="demo-answer regular-answer" data-regular-answer></div>
+                <div class="demo-metrics"><div><strong data-regular-tokens>0</strong><span>LLM tokens</span></div><div><strong data-regular-time>0 s</strong><span>query time</span></div><div><strong data-regular-sources>0 / 1</strong><span>facts connected</span></div></div>
+              </article>
+              <article class="comparison-pane integrail-pane">
+                <div class="pane-heading"><span class="tiny-label"><span class="mini-brand" aria-hidden="true">⋈</span> WITH INTEGRAIL</span><h3>Ask. Connect. Answer.</h3><p>The right facts, already connected.</p></div>
+                <div class="demo-graph" data-demo-graph></div>
+                <div class="process-status"><span class="answer-indicator" aria-hidden="true"></span><span data-integrail-status>Knowledge indexed. Ready to query.</span></div>
+                <div class="demo-answer integrail-answer" data-integrail-answer></div>
+                <div class="demo-metrics"><div><strong data-integrail-tokens>0</strong><span>LLM tokens</span></div><div><strong data-integrail-time>0 s</strong><span>query time</span></div><div><strong data-integrail-sources>0 / 1</strong><span>facts connected</span></div></div>
+              </article>
+            </div>
+            <div class="demo-timeline"><div class="timeline-progress" data-demo-progress></div></div>
+            <div class="demo-bottom"><span><span class="status-dot"></span> ILLUSTRATIVE SIMULATION</span><span data-demo-caption>One indexed relationship. One direct answer.</span><span data-demo-elapsed>00:00 / 00:12</span></div>
+          </div>
+        </div>
+        <details class="assumptions"><summary>What’s behind the numbers? <span aria-hidden="true">+</span></summary><div><p>These are scripted teaching examples, not live queries or measured comparisons with Codex or Claude. The first models 60,000 versus 600 LLM tokens and 60 versus 0.6 seconds; the second models 120,000 versus 600 tokens and 120 versus 0.6 seconds. Playback is compressed to 12 seconds.</p><p>The 100× query-cost illustration assumes the same price per token and excludes ingestion, graph extraction, embeddings, storage and infrastructure. Real results depend on the corpus, retrieval, model, caching and question. Agents can also use search indexes and retrieval tools; exhaustive document reading is one baseline workflow, not their only mode. Graph retrieval requires the relevant facts to have been correctly extracted and linked.</p></div></details>
+      </div>
+    </section>
+
+    <section class="platform-section container section-space" id="platform">
+      <p class="eyebrow">03 / ONE CONNECTED FOUNDATION</p>
+      <div class="section-heading split-heading"><h2>From scattered files<br>to <em>working intelligence.</em></h2><p>Four layers. One continuous flow.<br>Built from the database up, so every agent starts with the right context.</p></div>
+      <div class="architecture" data-architecture>
+        <div class="architecture-explainer">
+          <div class="architecture-tabs" role="tablist" aria-label="Explore the platform layers" aria-orientation="vertical">
+            <button id="layer-tab-0" role="tab" aria-selected="true" aria-controls="layer-details" data-layer="0"><span class="mono">01</span><span>Scalable data foundation</span><span aria-hidden="true">↗</span></button>
+            <button id="layer-tab-1" role="tab" aria-selected="false" aria-controls="layer-details" tabindex="-1" data-layer="1"><span class="mono">02</span><span>Continuous sync & intake</span><span aria-hidden="true">↗</span></button>
+            <button id="layer-tab-2" role="tab" aria-selected="false" aria-controls="layer-details" tabindex="-1" data-layer="2"><span class="mono">03</span><span>RAG as a service</span><span aria-hidden="true">↗</span></button>
+            <button id="layer-tab-3" role="tab" aria-selected="false" aria-controls="layer-details" tabindex="-1" data-layer="3"><span class="mono">04</span><span>Agents as a service</span><span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="layer-details" id="layer-details" role="tabpanel" aria-labelledby="layer-tab-0"><p data-layer-copy>A scalable database brings vectorized passages and graph relationships together. Find what’s relevant and understand how it connects, without stitching together separate islands of knowledge.</p><div class="layer-tags" data-layer-tags><span>Vector search</span><span>Knowledge graph</span><span>Built to scale</span></div></div>
+          <p class="architecture-note"><span class="status-dot"></span> Explore each layer ↑</p>
+        </div>
+        <div class="stack-diagram" data-stack-diagram aria-label="Platform architecture, from database to agents"></div>
+      </div>
+    </section>
+
+    <section class="research-section container">
+      <div class="research-title"><span class="research-mark" aria-hidden="true">↗</span><p class="eyebrow">BUILT ON A BETTER IDEA</p><h2>Context with<br><em>connections.</em></h2></div>
+      <div class="research-body"><p class="research-lead">There’s research behind the approach.</p><p>Microsoft’s GraphRAG research found more comprehensive and diverse answers to global questions than a conventional RAG baseline. A separate systematic study found that combining retrieval approaches can improve performance.</p><p class="small-text">That’s why Integrail pairs vector context with graph relationships. These studies support the design direction; they do not benchmark Integrail or establish a universal accuracy gain.</p><div class="research-links"><a href="https://arxiv.org/abs/2404.16130" target="_blank" rel="noopener noreferrer">Microsoft GraphRAG paper <span>↗</span></a><a href="https://arxiv.org/abs/2502.11371" target="_blank" rel="noopener noreferrer">RAG vs. GraphRAG evaluation <span>↗</span></a></div></div>
+    </section>
+
+    <section class="ownership-section container section-space" id="control">
+      <p class="eyebrow">04 / YOURS, ALL THE WAY DOWN</p>
+      <div class="section-heading split-heading"><h2>Your AI advantage.<br><em>Your rules.</em></h2><p>Intelligence shouldn’t mean giving up control of the knowledge that makes your business yours.</p></div>
+      <div class="ownership-grid">
+        <article><span class="mono">01 / LOCATION</span><h3>Choose its home.</h3><p>Deploy the knowledge layer on your provider’s cloud or your chosen private infrastructure.</p></article>
+        <article><span class="mono">02 / KNOWLEDGE</span><h3>Keep your context.</h3><p>Your documents, graph and vector index form a reusable knowledge layer across your agents.</p></article>
+        <article><span class="mono">03 / CHOICE</span><h3>Bring your agents.</h3><p>Use OpenAI Codex, Anthropic Claude or custom agents with the same connected business context.</p></article>
+      </div>
+      <p class="deployment-note">Your knowledge layer stays in your chosen environment. When using external model APIs, selected context is sent to that provider under your chosen configuration and terms.</p>
+    </section>
+
+    <section class="provider-banner container">
+      <div><p class="eyebrow">FOR CLOUD, HOSTING & MANAGED SERVICE PROVIDERS</p><h2>The next cloud service<br>is <em>intelligence.</em></h2><p>Turn your infrastructure and customer relationships into a recurring AI business.</p><a class="button button-dark" href="providers.html">Make AI your business <span aria-hidden="true">↗</span></a></div>
+      <div class="provider-mini-diagram" data-provider-mini aria-hidden="true"></div>
+    </section>
+
+    <section class="faq-section container section-space" id="faq">
+      <div><p class="eyebrow">A LITTLE MORE CONTEXT</p><h2>Good questions.<br><em>Clear answers.</em></h2></div>
+      <div class="faq-list">
+        <details><summary>What is RAG as a service?<span aria-hidden="true">+</span></summary><p>Retrieval-augmented generation gives an AI model relevant company information at query time. Integrail provides the connected knowledge layer: ingestion, vectorized passages and graph facts, plus retrieval for your agents. Your provider hosts and operates the service.</p></details>
+        <details><summary>Why combine graph and vector search?<span aria-hidden="true">+</span></summary><p>Vector search finds text with related meaning. Graph search follows explicit connections between entities, such as who invested in a company and who works there. Together they can supply both the source passage and the relationships a question depends on.</p></details>
+        <details><summary>Does this replace Codex or Claude?<span aria-hidden="true">+</span></summary><p>Integrail gives those agents shared business context. You choose the agent; Integrail helps it retrieve connected knowledge instead of reconstructing the same facts from files with each question. Available runtimes and integrations are agreed for your deployment.</p></details>
+        <details><summary>Where does our data live?<span aria-hidden="true">+</span></summary><p>Your documents, graph and vector index live in the infrastructure chosen with your hosting or managed service provider. Model inference can have a separate data boundary: using an external API sends the retrieved context to that model provider. Define location, access, retention and model routing as part of your deployment.</p></details>
+        <details><summary>How do we get started?<span aria-hidden="true">+</span></summary><p>Start with one knowledge source, one useful workflow and a provider you trust. Define a pilot, evaluate answer quality and permissions on your own data, and agree the rollout with your provider. <button class="text-button" data-pilot>Prepare your pilot brief ↗</button></p></details>
+      </div>
+    </section>
+
+    <section class="closing-section container"><p class="eyebrow">YOUR KNOWLEDGE HAS WORK TO DO.</p><h2>Put it to work.<br><em>Keep it yours.</em></h2><button class="button button-dark" data-pilot>Let’s build your AI advantage <span aria-hidden="true">↗</span></button><span class="closing-index" aria-hidden="true">[ i → ∞ ]</span></section>
+  </main>
+  <footer class="site-footer container" data-footer></footer>
+  <div data-dialog-root></div>
+  <noscript><p class="noscript-note">Enable JavaScript to explore the animated examples and prepare a pilot brief. All product and provider information remains readable.</p></noscript>
+</body>
+</html>

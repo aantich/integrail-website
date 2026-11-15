@@ -1,0 +1,14 @@
+{
+  "name": "integrail-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Integrail — Agents and RAG as a service. Totally yours.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs --production",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
