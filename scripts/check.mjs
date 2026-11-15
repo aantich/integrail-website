@@ -6,7 +6,7 @@ import {spawnSync} from 'node:child_process';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 let failures=0;
 function fail(message){console.error(`FAIL: ${message}`);failures++;}
-for(const file of ['assets/site.js',...(await readdir(path.join(root,'scripts'))).filter(name=>name.endsWith('.mjs')).map(name=>`scripts/${name}`)]){
+for(const file of [...(await readdir(path.join(root,'assets'))).filter(name=>name.endsWith('.js')).map(name=>`assets/${name}`),...(await readdir(path.join(root,'scripts'))).filter(name=>name.endsWith('.mjs')).map(name=>`scripts/${name}`)]){
   const result=spawnSync(process.execPath,['--check',path.join(root,file)],{encoding:'utf8'});
   if(result.status!==0)fail(`${file}: ${result.stderr}`);
 }

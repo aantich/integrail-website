@@ -51,63 +51,16 @@ function setMotion(paused) {
 }
 
 function renderHero() {
-  const holder = $('[data-hero-illustration]');
-  if (!holder) return;
-  holder.innerHTML = `<svg viewBox="0 0 600 550" role="img" aria-labelledby="hero-title hero-desc">
-    <title id="hero-title">Your business knowledge, connected</title><desc id="hero-desc">Documents and email flow into a graph and vector database. Connected knowledge powers retrieval and your choice of AI agents.</desc>
-    <defs><pattern id="hero-grid" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".6" fill="#c4c4c4"/></pattern><filter id="hero-shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="10" stdDeviation="13" flood-color="#5d5d5d" flood-opacity=".08"/></filter><path id="hero-intake-path" d="M55 188C55 241 81 277 163 291L284 338"/><path id="hero-agent-path" d="M330 235V127Q330 111 312 111H286V91"/></defs>
-    <rect x="12" y="16" width="572" height="509" fill="url(#hero-grid)"/>
-    <text x="21" y="26" class="hero-svg-caption">YOUR KNOWLEDGE, IN MOTION</text><text x="540" y="26" class="hero-svg-caption">[ 01 ]</text>
-    <ellipse cx="329" cy="478" rx="200" ry="29" fill="#e3e3e3" opacity=".6"/>
-    <g class="hero-plane" filter="url(#hero-shadow)">
-      <path d="m104 384 223 100 223-117-222-97Z" fill="#eaeaea" stroke="#bcbcbc"/>
-      <path d="M104 384v22l223 100v-22Z" fill="#e0e0e0" stroke="#bcbcbc"/><path d="m327 484 223-117v22L327 506Z" fill="#d8d8d8" stroke="#bcbcbc"/>
-      <path d="m104 317 223 100 223-117-222-97Z" fill="#f5f5f5" stroke="#bcbcbc"/>
-      <path d="M104 317v16l223 100v-16Z" fill="#ebebeb" stroke="#bcbcbc"/><path d="m327 417 223-117v16L327 433Z" fill="#e4e4e4" stroke="#bcbcbc"/>
-      <g transform="translate(153 354) rotate(24)"><text class="hero-svg-caption" fill="#7d7d7d">CONTINUOUS SYNC</text><path d="M0 8h56m8 0h20" stroke="#b1b1b1" stroke-width="2"/></g>
-      <g transform="translate(150 417) rotate(24)"><text class="hero-svg-caption">GRAPH + VECTOR DATABASE</text></g>
-      <path d="m104 249 223 100 223-117-222-97Z" fill="#fff" stroke="#bcbcbc"/>
-      <path d="M104 249v14l223 100v-14Z" fill="#f4f4f4" stroke="#bcbcbc"/><path d="m327 349 223-117v14L327 363Z" fill="#ebebeb" stroke="#bcbcbc"/>
-      <g fill="none" stroke="#b1b1b1" stroke-width="1.2"><path d="m195 243 105-46 121 39-94 62-132-55 90 19 136-26M300 197l-15 65 42 36M195 243l102 0 30 55M285 262l-58 40"/><path d="m195 243-43-17M421 236l51-15M300 197l21-29M327 298l29 31" stroke="#d8d8d8"/></g>
-      <g fill="#f9f9f9" stroke="#8f8f8f" stroke-width="1.2"><ellipse cx="195" cy="243" rx="15" ry="9"/><ellipse cx="300" cy="197" rx="15" ry="9"/><ellipse cx="421" cy="236" rx="15" ry="9"/><ellipse cx="327" cy="298" rx="15" ry="9"/><ellipse cx="285" cy="262" rx="21" ry="12" fill="#434343" stroke="#434343"/></g>
-      <g fill="#c2c2c2"><ellipse cx="152" cy="226" rx="5" ry="3"/><ellipse cx="472" cy="221" rx="5" ry="3"/><ellipse cx="321" cy="168" rx="5" ry="3"/><ellipse cx="356" cy="329" rx="5" ry="3"/><ellipse cx="227" cy="302" rx="5" ry="3"/></g>
-      <circle r="3" fill="#565656"><animateMotion dur="4s" repeatCount="indefinite" path="M195 243 300 197 421 236 327 298 285 262 195 243"/></circle>
-      <text x="180" y="225" class="hero-svg-small">People</text><text x="296" y="181" class="hero-svg-small">Knowledge</text><text x="415" y="219" class="hero-svg-small">Decisions</text><text x="322" y="321" class="hero-svg-small">Context</text>
-      <g transform="translate(346 459) rotate(-28)"><text class="hero-svg-brand">integrail</text></g>
-    </g>
-    <path d="M330 214V132M193 91v25h274V91M330 116v-25" fill="none" stroke="#afafaf" stroke-width="1.1" class="hero-line"/>
-    <g class="hero-float"><rect x="141" y="44" width="103" height="48" rx="5" fill="#fff" stroke="#c3c3c3"/><text x="193" y="65" text-anchor="middle" fill="#5f5f5f" font-size="16">⌘</text><text x="193" y="82" text-anchor="middle" class="hero-svg-label">OpenAI Codex</text></g>
-    <g class="hero-float-alt"><rect x="278" y="44" width="103" height="48" rx="5" fill="#fff" stroke="#c3c3c3"/><text x="330" y="65" text-anchor="middle" fill="#5f5f5f" font-size="20">✳</text><text x="330" y="82" text-anchor="middle" class="hero-svg-label">Claude</text></g>
-    <g class="hero-float"><rect x="415" y="44" width="103" height="48" rx="5" fill="#fff" stroke="#c3c3c3"/><text x="467" y="65" text-anchor="middle" fill="#5f5f5f" font-size="17">&lt;/&gt;</text><text x="467" y="82" text-anchor="middle" class="hero-svg-label">Your agents</text></g>
-    <g class="hero-float-alt"><rect x="16" y="146" width="95" height="68" rx="5" fill="#fcfcfc" stroke="#cccccc"/><path d="M32 161h24v18H32zm0 0 12 10 12-10" fill="none" stroke="#999999"/><text x="31" y="198" class="hero-svg-label">Your inbox</text><path d="M76 159h17m-17 6h17m-17 6h10" stroke="#d6d6d6"/></g>
-    <use href="#hero-intake-path" fill="none" stroke="#bebebe" stroke-width="1.1" class="hero-line"/>
-    <circle r="3" fill="#707070"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#hero-intake-path"/></animateMotion></circle>
-    <g class="hero-float"><rect x="425" y="396" width="128" height="64" rx="5" fill="#fcfcfc" stroke="#c4c4c4"/><path d="M441 408h13l5 5v17h-18Zm13 0v6h5m-13 7h8m-8 4h8" fill="none" stroke="#999999"/><text x="470" y="421" class="hero-svg-label">Your files</text><text x="441" y="447" class="hero-svg-small">Always becoming context.</text></g>
-    <g filter="url(#hero-shadow)"><rect x="370" y="291" width="164" height="34" rx="5" fill="#303030"/><text x="452" y="312" text-anchor="middle" fill="#f7f7f7" font-size="10" letter-spacing=".1">RAG AS A SERVICE <tspan dx="9">↗</tspan></text></g>
-    <g transform="translate(28 471)"><circle r="3" fill="#747474" class="engine-signal"/><text x="13" y="3" class="hero-svg-caption">YOUR CLOUD. YOUR CONTROL.</text></g>
-    <path d="M15 514h16m-16 0v-16M584 514h-16m16 0v-16" stroke="#bebebe" fill="none"/>
-  </svg>`;
-}
-
-function stackMarkup() {
-  return `<div class="stack-caption"><span>THE INTEGRAIL STACK</span><span>[ ↑ ]</span></div>
-  <div class="stack-layer" data-stack-layer="3"><div class="stack-label"><span>04 / AGENTS AS A SERVICE</span><span>DO</span></div><div class="stack-agents"><div class="agent-box"><span class="agent-symbol" aria-hidden="true">⌘</span>OpenAI Codex</div><div class="agent-box"><span class="agent-symbol" aria-hidden="true">✳</span>Anthropic Claude</div><div class="agent-box"><span class="agent-symbol" aria-hidden="true">&lt;/&gt;</span>Custom agents</div></div><i class="flow-light" aria-hidden="true"></i></div>
-  <div class="stack-layer" data-stack-layer="2"><div class="stack-label"><span>03 / RAG AS A SERVICE</span><span>RETRIEVE</span></div><div class="stack-main-label">The right context. Fast.<span class="layer-symbol" aria-hidden="true">↗</span></div><div class="stack-sub-label">Graph traversal + semantic retrieval</div><i class="flow-light" aria-hidden="true"></i></div>
-  <div class="stack-layer" data-stack-layer="1"><div class="stack-label"><span>02 / SYNC & INTAKE</span><span>CONNECT</span></div><div class="stack-main-label">Always becoming knowledge.<span class="layer-symbol" aria-hidden="true">↔</span></div><div class="stack-sub-label">Documents → vector chunks + entity–relation–entity facts</div><i class="flow-light" aria-hidden="true"></i></div>
-  <div class="stack-layer is-selected" data-stack-layer="0"><div class="stack-label"><span>01 / SCALABLE DATABASE</span><span>STORE</span></div><div class="stack-main-label">One connected foundation.<span class="layer-symbol" aria-hidden="true">▱</span></div><div class="stack-sub-label">Vector index + knowledge graph</div></div>
-  <span class="stack-flow">↑ continuously synchronized from your environment ↑</span><div class="stack-sources"><span>Gmail</span><span>Microsoft 365</span><span>SharePoint</span><span>Google Drive</span></div>`;
+  window.IntegrailArchitecture.render($('[data-hero-illustration]'), {compact:true, id:'hero-architecture'});
 }
 
 function initializeArchitecture() {
-  $$('[data-stack-diagram]').forEach(node => { node.innerHTML = stackMarkup(); });
+  $$('[data-stack-diagram]').forEach((node,index) => {
+    window.IntegrailArchitecture.render(node, {compact:providerPage, id:`platform-architecture-${index}`});
+  });
   const architecture = $('[data-architecture]');
   if (!architecture) return;
-  const layers = [
-    {copy:'A scalable database brings vectorized passages and graph relationships together. Find what’s relevant and understand how it connects, without stitching together separate islands of knowledge.',tags:['Vector search','Knowledge graph','Built to scale']},
-    {copy:'Connect Gmail, Microsoft 365, SharePoint and Google Drive. A continuous intake flow turns changing documents into vectorized chunks and entity–relation–entity facts, linked back to their sources.',tags:['Continuous sync','Vectorized chunks','Graph facts']},
-    {copy:'Retrieve relevant passages by meaning and follow relationships across sources. Deliver compact, connected context to an agent, so it can answer without repeatedly reading the whole archive.',tags:['Semantic context','Relationship queries','Source grounding']},
-    {copy:'Give OpenAI Codex, Anthropic Claude and your own custom agents a common knowledge foundation. Start with research and document analysis, then build workflows around your business context.',tags:['OpenAI Codex','Anthropic Claude','Custom agents']}
-  ];
+  const layers = window.IntegrailArchitecture.layers;
   const tabs = $$('[data-layer]', architecture);
   function selectLayer(index) {
     tabs.forEach((tab,i) => { tab.setAttribute('aria-selected', String(i === index)); tab.tabIndex = i === index ? 0 : -1; });
@@ -118,6 +71,7 @@ function initializeArchitecture() {
   }
   tabs.forEach((tab,index) => tab.addEventListener('click', () => selectLayer(index)));
   addTabKeyboard(tabs, selectLayer, true);
+  selectLayer(0);
 }
 
 function providerCloudSvg(compact = false) {

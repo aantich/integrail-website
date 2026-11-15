@@ -30,3 +30,16 @@ QA used the Codex in-app browser. This is not a cross-browser certification, for
 The preview used port 4187, preserving an unrelated process already on 4173. The machine’s Homebrew Node installation had a missing `simdjson` library in the initial login-shell invocation; checks/builds passed with the existing NVM Node 24.20.0 and with `npm` in the non-login environment. No system software or shell configuration was modified.
 
 The research reference tab, temporary viewport overrides and local QA server are cleaned up after verification. Source, documentation and the production output remain in this project folder.
+
+## 2D architecture revision — 15 November 2026
+
+- Read Anton’s supplied architecture and his clarifications: Data Objects as a Service uses Lastapp’s entity model; UI as a Service includes both fixed and generated interfaces. Inspected Lastapp’s current entity/runtime/MCP guides and typed entity model without editing that project.
+- Replaced the perspective hero and generic platform stack with one shared flat-diagram renderer. The detailed desktop diagram follows the reference’s environment → connector/synchronizer → knowledge engine organization, with the agentic layer and its four consumers above the engine.
+- Browser inspection at 1280 pixels confirmed the reference-based desktop composition and routed connectors. Solid intake arrows and dashed agent-action arrows terminate at the rendered nodes. The environment bus connects the source rows.
+- At 390 pixels, visually inspected the vertical diagram, connector, graph/vector/SQL stores, RAG/data-object services and agent/UI cards. Text is reflowed HTML rather than a scaled drawing.
+- Both pages checked at 320 and 768 pixels with no horizontal document overflow. Desktop also reports no overflow. Resize switches the detailed diagram between wide and compact layouts and redraws its routes.
+- Explainer tabs update content and highlighting. ArrowDown from the RAG/data-object tab selects Agents & UI, whose explanation explicitly includes fixed and generated interfaces.
+- Keyboard activation of the global motion control switches the page to its completed/static state. The SVG routing particles use the same page-wide pause/resume mechanism as the previous illustrations.
+- No duplicate DOM IDs and no browser console warnings or errors were reported in the inspected final home-page state.
+- The RAG comparison JavaScript block and both examples’ HTML are byte-for-byte unchanged from the prior source revision. The first example still renders its complete 60,000-versus-600 token result when motion is off.
+- The local preview on port 4187 was already running at the start of this revision and is left running, as Anton requested. This supersedes the initial QA-server cleanup note for that process.
