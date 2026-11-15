@@ -159,15 +159,15 @@ function providerCloudSvg(compact = false) {
     <rect x="8" y="10" width="484" height="445" fill="url(#provider-dots-${compact})"/>
     <text x="18" y="25" class="hero-svg-caption">YOUR INFRASTRUCTURE, NEW POSSIBILITIES</text>
     <g fill="none" stroke="#b6b6b6" stroke-width="1.2"><path d="M85 106v48q0 13 15 13h300q15 0 15-13v-48M250 106v106" class="hero-line"/></g>
-    <g class="hero-float"><rect x="43" y="61" width="85" height="60" rx="5" fill="#fff" stroke="#c4c4c4"/><text x="85" y="87" font-size="24" fill="#6d6d6d" text-anchor="middle">⌂</text><text x="85" y="108" font-size="10" fill="#686868" text-anchor="middle">Customer 01</text></g>
-    <g class="hero-float-alt"><rect x="207" y="61" width="85" height="60" rx="5" fill="#fff" stroke="#c4c4c4"/><text x="249" y="87" font-size="24" fill="#6d6d6d" text-anchor="middle">⌂</text><text x="249" y="108" font-size="10" fill="#686868" text-anchor="middle">Customer 02</text></g>
-    <g class="hero-float"><rect x="371" y="61" width="85" height="60" rx="5" fill="#fff" stroke="#c4c4c4"/><text x="413" y="87" font-size="24" fill="#6d6d6d" text-anchor="middle">⌂</text><text x="413" y="108" font-size="10" fill="#686868" text-anchor="middle">Customer 03</text></g>
+    <g class="hero-float"><rect x="43" y="61" width="85" height="60" rx="5" fill="#fff" stroke="#c4c4c4"/><text x="85" y="87" font-size="24" fill="#6d6d6d" text-anchor="middle">⌂</text><text x="85" y="108" font-size="14" fill="#686868" text-anchor="middle">Customer 01</text></g>
+    <g class="hero-float-alt"><rect x="207" y="61" width="85" height="60" rx="5" fill="#fff" stroke="#c4c4c4"/><text x="249" y="87" font-size="24" fill="#6d6d6d" text-anchor="middle">⌂</text><text x="249" y="108" font-size="14" fill="#686868" text-anchor="middle">Customer 02</text></g>
+    <g class="hero-float"><rect x="371" y="61" width="85" height="60" rx="5" fill="#fff" stroke="#c4c4c4"/><text x="413" y="87" font-size="24" fill="#6d6d6d" text-anchor="middle">⌂</text><text x="413" y="108" font-size="14" fill="#686868" text-anchor="middle">Customer 03</text></g>
     <g class="hero-plane"><path d="m58 312 191 85 193-99-191-83Z" fill="#e5e5e5" stroke="#bababa"/><path d="M58 312v23l191 85v-23Z" fill="#dbdbdb" stroke="#bababa"/><path d="m249 397 193-99v23l-193 99Z" fill="#d3d3d3" stroke="#bababa"/>
     <path d="m58 263 191 85 193-99-191-83Z" fill="#fff" stroke="#bababa"/><path d="M58 263v17l191 85v-17Z" fill="#f0f0f0" stroke="#bababa"/><path d="m249 348 193-99v17l-193 99Z" fill="#e6e6e6" stroke="#bababa"/>
     <g transform="translate(247 264)"><ellipse rx="47" ry="22" fill="#f3f3f3" stroke="#bcbcbc"/><path d="M-47-16V0c0 29 94 29 94 0v-16" fill="#f3f3f3" stroke="#bcbcbc"/><ellipse cy="-16" rx="47" ry="22" fill="#fff" stroke="#bcbcbc"/><path d="m-21-16 12-6 14 6 12-8 10 10M-9-22 5-7 27-14M-21-16 5-7" stroke="#969696" fill="none"/><g fill="#858585"><circle cx="-21" cy="-16" r="3"/><circle cx="-9" cy="-22" r="3"/><circle cx="5" cy="-7" r="3"/><circle cx="27" cy="-14" r="3"/></g></g>
     <g transform="translate(105 291) rotate(24)"><text class="hero-svg-caption">INTEGRAIL / CONNECTED AI STACK</text></g><g transform="translate(104 345) rotate(24)"><text class="hero-svg-caption">YOUR CLOUD</text></g></g>
     <circle r="3" fill="#646464"><animateMotion dur="4s" repeatCount="indefinite"><mpath href="#provider-flow-${compact}"/></animateMotion></circle>
-    <g class="hero-float-alt"><rect x="338" y="333" width="128" height="63" rx="5" fill="#373737"/><text x="351" y="351" font-size="7" fill="#cecece" letter-spacing=".8">NEW SERVICE LINE</text><text x="351" y="375" font-size="19" fill="#f4f4f4" letter-spacing="-.6">AI, from you. ↗</text></g>
+    <g class="hero-float-alt"><rect x="338" y="333" width="128" height="63" rx="5" fill="#373737"/><text x="351" y="351" font-size="10" fill="#cecece" letter-spacing=".8">NEW SERVICE LINE</text><text x="351" y="375" font-size="19" fill="#f4f4f4" letter-spacing="-.6">AI, from you. ↗</text></g>
     <g transform="translate(30 444)"><circle r="3" fill="#7c7c7c" class="engine-signal"/><text x="12" y="3" class="hero-svg-caption">LOCAL TRUST. RECURRING VALUE.</text></g>
   </svg>`;
 }
@@ -201,7 +201,7 @@ function graphMarkup(relationship) {
     <g class="graph-noise" fill="none" stroke="#cfcfcf" stroke-width="1"><path d="m24 40 62 15 33-28 38 42 58-47 61 35 76-27 41 32M24 40l7 103 72 28 54-32 58 37 61-39 85 34 32-109M86 55l17 116M157 69l58 107M276 57v80M352 30l9 141M31 143 86 55 157 69 215 22 276 137 393 62"/><g fill="#f6f6f6"><circle cx="24" cy="40" r="5"/><circle cx="86" cy="55" r="7"/><circle cx="119" cy="27" r="4"/><circle cx="157" cy="69" r="6"/><circle cx="215" cy="22" r="6"/><circle cx="276" cy="57" r="6"/><circle cx="352" cy="30" r="4"/><circle cx="393" cy="62" r="5"/><circle cx="31" cy="143" r="4"/><circle cx="103" cy="171" r="6"/><circle cx="157" cy="139" r="4"/><circle cx="215" cy="176" r="5"/><circle cx="276" cy="137" r="5"/><circle cx="361" cy="171" r="6"/></g></g>
     ${relationship ? `<path class="graph-edge" d="M110 100H172M258 100h62"/><text x="141" y="76" class="graph-relation">INVESTED IN</text><text x="141" y="88" class="graph-relation">$100,000</text><text x="289" y="84" class="graph-relation">CMO OF</text><rect x="15" y="78" width="95" height="44" rx="6" class="graph-node primary"/><rect x="172" y="78" width="86" height="44" rx="6" class="graph-node primary"/><rect x="320" y="78" width="95" height="44" rx="6" class="graph-node primary"/><text x="62" y="103" class="graph-node-label">John Smith</text><text x="215" y="103" class="graph-node-label">Integrail</text><text x="367" y="103" class="graph-node-label">Jane Doe</text><path d="m165 97 7 3-7 3m100-6-7 3 7 3" fill="none" stroke="#7e7e7e" class="graph-trace"/><text x="215" y="155" class="graph-relation">2 facts → 1 connected answer</text>` : `<path class="graph-edge" d="M151 100H280"/><text x="216" y="77" class="graph-relation">INVESTED IN</text><text x="216" y="94" class="graph-relation">$100,000</text><rect x="48" y="78" width="103" height="44" rx="6" class="graph-node primary"/><rect x="280" y="78" width="103" height="44" rx="6" class="graph-node primary"/><text x="99" y="103" class="graph-node-label">John Smith</text><text x="331" y="103" class="graph-node-label">Integrail</text><path d="m273 97 7 3-7 3" fill="none" stroke="#7e7e7e" class="graph-trace"/><text x="216" y="151" class="graph-relation">1 graph query → the relevant fact</text>`}
   </svg><svg class="graph-mobile" viewBox="0 0 170 166" role="img" aria-label="${relationship ? 'Smith is an investor in Integrail. Doe is CMO of Integrail.' : 'Smith invested 100,000 dollars in Integrail.'}">
-  ${relationship ? `<path class="graph-edge" d="M85 36v33M85 131v-33"/><rect class="graph-node primary" x="36" y="8" width="98" height="28" rx="5"/><rect class="graph-node primary" x="36" y="69" width="98" height="28" rx="5"/><rect class="graph-node primary" x="36" y="131" width="98" height="28" rx="5"/><text class="graph-node-label" x="85" y="26">John Smith</text><text class="graph-node-label" x="85" y="87">Integrail</text><text class="graph-node-label" x="85" y="149">Jane Doe</text><text class="graph-relation" x="125" y="55" style="font-size:6px">INVESTED IN</text><text class="graph-relation" x="120" y="117" style="font-size:7px">CMO OF</text><path class="graph-trace" d="m82 65 3 4 3-4m-6 37 3-8 3 8" fill="none" stroke="#777"/>` : `<path class="graph-edge" d="M85 46v66"/><rect class="graph-node primary" x="35" y="15" width="100" height="31" rx="5"/><rect class="graph-node primary" x="35" y="112" width="100" height="31" rx="5"/><text class="graph-node-label" x="85" y="35">John Smith</text><text class="graph-node-label" x="85" y="132">Integrail</text><rect x="41" y="64" width="88" height="27" fill="#f6f6f6"/><text class="graph-relation" x="85" y="75">INVESTED IN</text><text class="graph-relation" x="85" y="88">$100,000</text><path class="graph-trace" d="m82 108 3 4 3-4" fill="none" stroke="#777"/>`}
+  ${relationship ? `<path class="graph-edge" d="M85 36v33M85 131v-33"/><rect class="graph-node primary" x="36" y="8" width="98" height="28" rx="5"/><rect class="graph-node primary" x="36" y="69" width="98" height="28" rx="5"/><rect class="graph-node primary" x="36" y="131" width="98" height="28" rx="5"/><text class="graph-node-label" x="85" y="26">John Smith</text><text class="graph-node-label" x="85" y="87">Integrail</text><text class="graph-node-label" x="85" y="149">Jane Doe</text><text class="graph-relation" x="125" y="55" style="font-size:9px">INVESTED IN</text><text class="graph-relation" x="120" y="117" style="font-size:10px">CMO OF</text><path class="graph-trace" d="m82 65 3 4 3-4m-6 37 3-8 3 8" fill="none" stroke="#777"/>` : `<path class="graph-edge" d="M85 46v66"/><rect class="graph-node primary" x="35" y="15" width="100" height="31" rx="5"/><rect class="graph-node primary" x="35" y="112" width="100" height="31" rx="5"/><text class="graph-node-label" x="85" y="35">John Smith</text><text class="graph-node-label" x="85" y="132">Integrail</text><rect x="41" y="64" width="88" height="27" fill="#f6f6f6"/><text class="graph-relation" x="85" y="75">INVESTED IN</text><text class="graph-relation" x="85" y="88">$100,000</text><path class="graph-trace" d="m82 108 3 4 3-4" fill="none" stroke="#777"/>`}
   </svg>`;
 }
 
@@ -222,15 +222,16 @@ function initializeDemo() {
   let animationFrame = 0;
   let completeAnnounced = false;
   const duration = 12000;
-  // Announce only completed answers, not the rapidly changing metrics.
+  const cycleDuration = duration + 3200;
+  // Announce once per selected example, not the metrics or every automatic loop.
   const announcement = document.createElement('span');
   announcement.className = 'sr-only'; announcement.setAttribute('aria-live','polite');
   demo.append(announcement);
 
   function updatePlayButton() {
-    const active = playing && !motionPaused && elapsed < duration;
+    const active = playing && !motionPaused;
     play.textContent = active ? 'Ⅱ' : '▷';
-    play.setAttribute('aria-label',active ? 'Pause example' : elapsed >= duration ? 'Replay example' : 'Play example');
+    play.setAttribute('aria-label',active ? 'Pause example' : 'Play example');
     play.title = play.getAttribute('aria-label');
   }
 
@@ -277,26 +278,25 @@ function initializeDemo() {
     regularAnswer.classList.toggle('incomplete',finished && scenario === 'relationship');
     integrailAnswer.classList.toggle('complete',answered);
     $('[data-demo-progress]',demo).style.width = `${progress * 100}%`;
-    $('[data-demo-elapsed]',demo).textContent = `00:${String(Math.floor(elapsed/1000)).padStart(2,'0')} / 00:12`;
+    $('[data-demo-elapsed]',demo).textContent = `00:${String(Math.floor(Math.min(elapsed,duration)/1000)).padStart(2,'0')} / 00:12`;
     if (finished && !completeAnnounced && started) {announcement.textContent = `Example complete. ${data.answer.replace(/<[^>]+>/g,'')} Integrail: ${data.tokens} modeled tokens, ${data.time} seconds. Baseline: ${data.regularTokens} modeled tokens, ${data.regularTime} seconds.`;completeAnnounced = true;}
     updatePlayButton();
   }
 
   function frame(now) {
     animationFrame = 0;
-    if (!playing || motionPaused || !inView || document.hidden || elapsed >= duration) {previousTime = 0;return;}
-    if (previousTime) elapsed = Math.min(duration,elapsed + Math.min(now - previousTime,150));
+    if (!playing || motionPaused || !inView || document.hidden) {previousTime = 0;return;}
+    if (previousTime) elapsed = (elapsed + Math.min(now - previousTime,150)) % cycleDuration;
     previousTime = now; started = true; render(); schedule();
   }
-  function schedule() {if (!animationFrame && playing && !motionPaused && inView && !document.hidden && elapsed < duration) animationFrame = requestAnimationFrame(frame);}
+  function schedule() {if (!animationFrame && playing && !motionPaused && inView && !document.hidden) animationFrame = requestAnimationFrame(frame);}
   function replay() {elapsed=0;previousTime=0;completeAnnounced=false;announcement.textContent='';playing=true;if(motionPaused) elapsed=duration;render();schedule();}
   tabs.forEach(tab => tab.addEventListener('click', () => setScenario(tab.dataset.scenario)));
   addTabKeyboard(tabs,index => setScenario(tabs[index].dataset.scenario));
   $('[data-demo-replay]',demo).addEventListener('click',replay);
   play.addEventListener('click', () => {
     if(motionPaused) {setMotion(false);return;}
-    if(elapsed >= duration) replay();
-    else {playing=!playing;previousTime=0;render();schedule();}
+    playing=!playing;previousTime=0;render();schedule();
   });
   motionListeners.add(paused => {previousTime=0;if(paused){elapsed=duration;render();}else{if(elapsed>=duration){elapsed=0;completeAnnounced=false;}playing=true;render();schedule();}});
   new IntersectionObserver(entries => {inView=entries[0].isIntersecting;previousTime=0;schedule();},{threshold:.2}).observe(demo);

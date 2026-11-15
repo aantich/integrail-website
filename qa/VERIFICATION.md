@@ -61,3 +61,12 @@ The research reference tab, temporary viewport overrides and local QA server are
 - Operations now starts with a direct instruction to schedule a kickoff, invite the team and create a shared folder. It shows connected tools and a completed result, without a research question.
 - Verified all three tabs, keyboard navigation and restoration of source icons, citations, follow-up visibility and completion labels when switching between modes. Inspected desktop at 1280 pixels and checked mobile at 390/320 pixels; no horizontal overflow or browser errors/warnings. Existing checks and build pass.
 - These remain labelled example workflows, with no live communication, scheduling or business-system mutations. All homepage content below the hero and existing architecture/RAG/provider/pilot interactions are unchanged.
+
+## Larger type and looping comparisons — 15 November 2026
+
+- Increased body copy to mostly 16–19 px, comparison answers to 15 px, and the small navigation, source, citation, footer, form and architecture labels across both pages. Enlarged graph and provider SVG labels as well.
+- Reflowed the mobile comparison into full-width panels and switched the architecture to its compact arrangement below 1000 px. Removed fixed answer heights that would clip larger text; expanded diagram cards, labels and controls to fit.
+- Both comparison scenarios use a continuous 15.2-second cycle: 12 seconds of simulation and a 3.2-second result hold. The playback control remains “Pause example” through completion; automatic wrap does not require a restart. Screen-reader completion announcements happen once per selected example, not on every loop.
+- Observed the fact example reach 60,000 tokens / 100% and then return to an active intermediate frame with its pause control still active. Inspected the relationship scenario in continuous playback and verified scenario switching. Explicit pause holds the position; resume and global motion-off/on work. Reduced-motion continues to show a static completed result.
+- Visually inspected the desktop hero, both comparison diagrams, architecture, provider hero and calculator, plus mobile layouts. Checked 320, 390, 768, 1024 and 1280 px widths across the relevant layouts, including both pages: no horizontal document overflow. Larger text fits the inspected cards and panels. Browser logs showed no errors or warnings.
+- Final syntax, page-structure, links, anchors and asset checks pass; static build passes. The existing localhost server on port 4187 remains running.

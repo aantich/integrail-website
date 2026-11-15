@@ -26,7 +26,7 @@ npm start
 - Original monochrome illustration system and wordmark; Manrope, Instrument Serif and IBM Plex Mono, self-hosted with their SIL Open Font Licenses.
 - A business-first hero with sales, operations and research examples that connect company sources to an answer and a reusable agent workflow.
 - Flat, responsive architecture diagrams in the detailed platform explainer and provider page. They distinguish continuous ingestion from agent actions, show graph/vector/SQL data, the enterprise knowledge engine, RAG, business objects, agents and fixed/generated UI. The provider deployment illustration remains separate.
-- Two 12-second, pausable/replayable document-versus-graph comparisons: investment lookup and cross-document relationship discovery. The examples auto-start when visible, stop offscreen, and stop when the tab is hidden. They do not loop automatically.
+- Two automatically looping document-versus-graph comparisons: investment lookup and cross-document relationship discovery. Each 12-second simulation holds its final result for 3.2 seconds, then restarts. Optional pause/replay controls and reduced-motion preferences remain available. Offscreen or hidden-tab playback suspends and resumes when visible.
 - Keyboard-accessible tabs, mobile navigation, FAQ disclosures, native modal focus management, and a global motion switch. Reduced motion shows the completed examples without animation.
 - Separate cloud/hosting/MSP page with service packaging, responsibilities, pilot steps, and an editable illustrative revenue calculator.
 - A pilot brief planner. Visitors can download or copy their entries; no entries are sent or persisted. The form never pretends to submit a lead.

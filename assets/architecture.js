@@ -54,7 +54,7 @@ window.IntegrailArchitecture = (() => {
     if (!target) return;
     target.classList.remove('stack-diagram');
     target.classList.add('architecture-canvas');
-    const narrow = window.matchMedia('(max-width:650px)');
+    const narrow = window.matchMedia('(max-width:1000px)');
     const compactClass = `${compact || narrow.matches ? ' architecture-map--compact' : ''}${compact ? ' architecture-map--summary' : ''}`;
     target.innerHTML = `<figure class="architecture-map${compactClass}" role="group" aria-labelledby="${id}-title" aria-describedby="${id}-description">
       <figcaption class="am-caption"><span id="${id}-title">THE INTEGRAIL PLATFORM</span><span class="am-caption-note">YOUR CLOUD. YOUR CONTROL.</span></figcaption>
