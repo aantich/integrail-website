@@ -77,3 +77,9 @@ The research reference tab, temporary viewport overrides and local QA server are
 - Updated the shared header and footer on both pages, the two small illustration marks, and the favicon. Artwork is entirely vector paths and needs no runtime font or external assets.
 - Visually inspected the desktop header, 320 px mobile header and footer, and 768 px provider page. Logo assets load, navigation fits, and there is no horizontal page overflow at the checked widths. Browser logs show no errors or warnings.
 - Rechecked the corrected square corner in the browser. Syntax, links, structure and asset checks and the production build pass. Localhost remains available on port 4187.
+
+## Popup form spacing — 15 November 2026
+
+- Replaced edge-aligned native select arrows with a local SVG chevron inset 16 px from the right, reserving 42 px of right padding for each dropdown. Selects retain native selection and keyboard behavior.
+- Gave the longer use-case field more space in its desktop row and constrained grid children to their available width. The default “Research & document analysis” selection is fully visible in the inspected desktop popup.
+- Visually checked the desktop popup and the stacked mobile form. At 390 and 320 px, the dialog has equal 26 px form gutters and no internal horizontal overflow. Verified changing the use-case selection. Syntax, page, asset and production-build checks pass.
