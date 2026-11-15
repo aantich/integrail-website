@@ -53,3 +53,11 @@ The research reference tab, temporary viewport overrides and local QA server are
 - Existing syntax, structure, link, anchor and asset checks pass. The static build passes at approximately 692 KiB.
 - Byte comparisons confirm that all homepage content from the source band onward, both RAG simulations, the detailed architecture files and the provider page are unchanged by this revision.
 - The existing localhost server remains running on port 4187.
+
+## Agent action examples — 15 November 2026
+
+- Kept the Research example’s question, answer and ongoing research workflow.
+- Sales now shows a contextual renewal-risk answer, a separate user instruction to email the owner and log a CRM follow-up, and illustrated completed actions.
+- Operations now starts with a direct instruction to schedule a kickoff, invite the team and create a shared folder. It shows connected tools and a completed result, without a research question.
+- Verified all three tabs, keyboard navigation and restoration of source icons, citations, follow-up visibility and completion labels when switching between modes. Inspected desktop at 1280 pixels and checked mobile at 390/320 pixels; no horizontal overflow or browser errors/warnings. Existing checks and build pass.
+- These remain labelled example workflows, with no live communication, scheduling or business-system mutations. All homepage content below the hero and existing architecture/RAG/provider/pilot interactions are unchanged.

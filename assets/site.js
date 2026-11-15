@@ -55,44 +55,75 @@ function initializeBusinessHero() {
   if (!scene) return;
   const examples = [
     {
+      mode:'ask-act',
       sources:['Customer emails','Account plan','CRM records'],
       question:'What could put the Acme renewal at risk?',
+      answerLabel:'THE ANSWER, WITH CONTEXT',
       lead:'One unresolved support issue.',
       answer:'The contract renews in 14 days, and the latest email asks for an update.',
       citations:['Email thread','Renewal plan','Account record'],
-      agent:'Renewal copilot', tasks:['Watch accounts','Flag risks','Draft follow-ups']
+      command:'Email the account owner and log a follow-up in the CRM.',
+      agent:'Renewal follow-up sent', tasks:['Email sent','CRM task created','Owner assigned']
     },
     {
-      sources:['Team updates','Project plan','Task records'],
-      question:'What’s holding up the Atlas launch?',
-      lead:'Legal approval is still pending.',
-      answer:'The project plan and latest team update both flag it as the final blocker.',
-      citations:['Team update','Launch plan','Open task'],
-      agent:'Launch coordinator', tasks:['Track blockers','Prepare updates','Draft reminders']
+      mode:'direct-action',
+      sources:['Team directory','Shared drive','Calendar'],
+      icons:[
+        '<circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3M16 5a3 3 0 0 1 0 6M18 14a5 5 0 0 1 3 4v3"/>',
+        '<path d="M3 7V4h7l2 3h9v13H3zM3 10h18"/>',
+        '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 11h18M7 15h3M14 15h3"/>'
+      ],
+      question:'Schedule the Atlas kickoff for Tuesday, invite the team and create a shared folder.',
+      answerLabel:'YOUR REQUEST, PUT INTO ACTION',
+      lead:'On it.',
+      answer:'I’ll find a time that works for the team, send the invites and link the new folder in the event.',
+      citations:['Team directory','Shared drive','Calendar'],
+      next:'You ask.', nextEmphasis:'Your agent gets it done.',
+      agent:'Atlas kickoff ready', tasks:['Invites sent','Folder created','Link added to event']
     },
     {
+      mode:'research',
       sources:['Customer feedback','Interview notes','Support records'],
       question:'What did we learn from customer interviews?',
+      answerLabel:'THE ANSWER, WITH CONTEXT',
       lead:'Onboarding is the recurring friction point.',
       answer:'Teams want fewer setup steps and clearer ownership. Support requests echo the same theme.',
       citations:['Feedback','Interviews','Support tickets'],
+      next:'One answer.', nextEmphasis:'Now make it a workflow.',
       agent:'Customer insight agent', tasks:['Read feedback','Connect themes','Prepare briefs']
     }
   ];
   const tabs = $$('[data-business-example]', scene);
+  const sourceIcons = $$('.bs-source svg', scene);
+  const defaultIcons = sourceIcons.map(icon => icon.innerHTML);
   function selectExample(index) {
     const example = examples[index];
+    const completed = example.mode !== 'research';
+    scene.dataset.businessMode = example.mode;
     tabs.forEach((tab,i) => {
       tab.setAttribute('aria-selected', String(i === index));
       tab.tabIndex = i === index ? 0 : -1;
     });
     $('#business-example', scene).setAttribute('aria-labelledby', tabs[index].id);
     $('[data-business-question]', scene).textContent = example.question;
+    $('[data-business-answer-label]', scene).textContent = example.answerLabel;
     const answer = $('[data-business-answer]', scene);
     const lead = document.createElement('strong');
     lead.textContent = example.lead;
     answer.replaceChildren(lead, document.createTextNode(` ${example.answer}`));
+    $('[data-business-followup]', scene).hidden = !example.command;
+    $('[data-business-command]', scene).textContent = example.command || '';
+    $('[data-business-next]', scene).hidden = Boolean(example.command);
+    const nextEmphasis = document.createElement('em');
+    nextEmphasis.textContent = example.nextEmphasis || '';
+    $('[data-business-next-copy]', scene).replaceChildren(document.createTextNode(`${example.next || ''} `), nextEmphasis);
     $('[data-business-agent]', scene).textContent = example.agent;
+    $('[data-business-agent-label]', scene).textContent = completed ? 'DONE, IN YOUR CONNECTED TOOLS' : 'YOUR AGENT, ON YOUR KNOWLEDGE';
+    $('[data-business-agent-icon]', scene).textContent = completed ? '✓' : '↗';
+    $('.bs-agent-tasks', scene).setAttribute('aria-label', completed ? 'Illustrated completed actions' : 'Example agent workflow');
+    $('.bs-citations', scene).setAttribute('aria-label', example.mode === 'direct-action' ? 'Connected example tools' : 'Example answer sources');
+    $$('.bs-citations i', scene).forEach((node,i) => { node.textContent = example.mode === 'direct-action' ? '↗' : String(i + 1); });
+    sourceIcons.forEach((icon,i) => { icon.innerHTML = (example.icons || defaultIcons)[i]; });
     ['source','citation','task'].forEach((kind) => {
       const values = example[{source:'sources',citation:'citations',task:'tasks'}[kind]];
       $$(`[data-business-${kind}]`, scene).forEach((node,i) => { node.textContent = values[i]; });

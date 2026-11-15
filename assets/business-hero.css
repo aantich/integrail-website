@@ -50,6 +50,13 @@
 .bs-next>span{font-size:23px;font-weight:400;line-height:1}
 .bs-next p{font-size:10px;letter-spacing:-.1px}
 .bs-next em{font-family:var(--sans);font-style:normal;color:#333;letter-spacing:0}
+.business-scene [hidden]{display:none!important}
+.bs-action-request{position:relative;margin:14px 0 25px 35px;padding:12px 16px;background:#ededed;border:1px solid #d5d5d5;border-radius:5px}
+.bs-action-request .tiny-label{font-size:6px;color:#777;letter-spacing:.06em}
+.bs-action-request p{font-size:11px;line-height:1.7;letter-spacing:-.1px;margin-top:5px;color:#3c3c3c}
+.bs-command-arrow{position:absolute;bottom:-24px;left:calc(50% - 18px);font-size:20px;line-height:24px;color:#888}
+.business-scene[data-business-mode=direct-action] .bs-question p{min-height:40px}
+.business-scene:not([data-business-mode=research]) .bs-agent-tasks li::before{content:'✓';color:#bcbcbc}
 .bs-agent{position:relative;background:#252525;color:#fff;border:1px solid #252525;border-radius:6px;padding:16px 20px 14px;box-shadow:0 8px 20px #00000008}
 .bs-agent-heading{display:flex;align-items:center;gap:12px}
 .bs-agent-icon{display:grid;place-items:center;width:36px;height:36px;flex:none;border:1px solid #666;border-radius:5px;font-size:23px;color:#eaeaea}

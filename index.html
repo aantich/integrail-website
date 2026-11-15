@@ -36,7 +36,7 @@
         </div>
         <p class="hero-footnote">Delivered by your cloud, hosting or managed service provider.</p>
       </div>
-      <div class="hero-visual business-scene" data-business-scene>
+      <div class="hero-visual business-scene" data-business-scene data-business-mode="ask-act">
         <div class="bs-topline"><span class="tiny-label">FROM KNOWING TO DOING</span><span class="bs-example">EXAMPLE WORKFLOWS</span></div>
         <div class="bs-tabs" role="tablist" aria-label="Explore business examples">
           <button id="business-tab-0" role="tab" aria-selected="true" aria-controls="business-example" data-business-example="0">Sales</button>
@@ -53,15 +53,16 @@
           <div class="bs-answer-card">
             <div class="bs-question"><span class="bs-question-mark" aria-hidden="true">↗</span><p data-business-question>What could put the Acme renewal at risk?</p></div>
             <div class="bs-answer">
-              <div class="bs-answer-label"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M5 7h10l16 22M5 18h14M5 29h10L31 7" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>THE ANSWER, WITH CONTEXT</span></div>
+              <div class="bs-answer-label"><svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><path d="M5 7h10l16 22M5 18h14M5 29h10L31 7" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-business-answer-label>THE ANSWER, WITH CONTEXT</span></div>
               <p data-business-answer><strong>One unresolved support issue.</strong> The contract renews in 14 days, and the latest email asks for an update.</p>
               <div class="bs-citations" aria-label="Example answer sources"><span><i>1</i> <b data-business-citation="0">Email thread</b></span><span><i>2</i> <b data-business-citation="1">Renewal plan</b></span><span><i>3</i> <b data-business-citation="2">Account record</b></span></div>
             </div>
           </div>
-          <div class="bs-next"><span aria-hidden="true">↓</span><p>One answer. <em>Now make it a workflow.</em></p></div>
+          <div class="bs-next" data-business-next hidden><span aria-hidden="true">↓</span><p data-business-next-copy>One answer. <em>Now make it a workflow.</em></p></div>
+          <div class="bs-action-request" data-business-followup><span class="tiny-label">YOU → YOUR AGENT</span><p data-business-command>Email the account owner and log a follow-up in the CRM.</p><span class="bs-command-arrow" aria-hidden="true">↓</span></div>
           <div class="bs-agent">
-            <div class="bs-agent-heading"><span class="bs-agent-icon" aria-hidden="true">↗</span><div><span class="tiny-label">YOUR AGENT, ON YOUR KNOWLEDGE</span><h3 data-business-agent>Renewal copilot</h3></div><span class="bs-agent-dot" aria-hidden="true"></span></div>
-            <ul class="bs-agent-tasks" aria-label="Example agent workflow"><li data-business-task="0">Watch accounts</li><li data-business-task="1">Flag risks</li><li data-business-task="2">Draft follow-ups</li></ul>
+            <div class="bs-agent-heading"><span class="bs-agent-icon" data-business-agent-icon aria-hidden="true">✓</span><div><span class="tiny-label" data-business-agent-label>DONE, IN YOUR CONNECTED TOOLS</span><h3 data-business-agent>Renewal follow-up sent</h3></div><span class="bs-agent-dot" aria-hidden="true"></span></div>
+            <ul class="bs-agent-tasks" aria-label="Illustrated completed actions"><li data-business-task="0">Email sent</li><li data-business-task="1">CRM task created</li><li data-business-task="2">Owner assigned</li></ul>
           </div>
         </div>
         <div class="bs-control"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6zM8 12l3 3 5-6"/></svg><span>Your data. Your models. Your cloud.</span></div>
