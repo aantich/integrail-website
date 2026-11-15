@@ -61,6 +61,6 @@ The workflow uses Node.js 24 and official GitHub Actions pinned to commit SHAs. 
 
 ## Mobile preview
 
-A private, owner-only Sites preview is configured at **https://integrail-private-preview.anton-antich.chatgpt.site** so Anton can view it from his phone without reaching the Mac's localhost server. Use the same ChatGPT account if prompted to sign in. Publication status is verified through the Sites deployment tools before the link is handed over.
+The production website is mobile-accessible at **https://integrail.ai**. A separate private, owner-only Sites preview remains configured at **https://integrail-private-preview.anton-antich.chatgpt.site** so Anton can view it from his phone without reaching the Mac's localhost server. Use the same ChatGPT account if prompted to sign in. Publication status is verified through the Sites deployment tools before the link is handed over.
 
 See [verification](qa/VERIFICATION.md) for completed checks and browser coverage.
